@@ -2,10 +2,13 @@ import pandas as pd
 from transformers import pipeline
 
 # === Load CSV ===
-df = pd.read_csv("../data/cleaned_scraped_reviews.csv")
-
+df = pd.read_csv("test_reviews.csv")
+df = df.head(30)
 # Ensure you have a column with review text
 reviews = df["text"].dropna().astype(str).tolist()
+
+print(reviews)
+
 
 # === Define candidate labels (policy categories) ===
 labels = [
