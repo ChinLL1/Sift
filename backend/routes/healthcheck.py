@@ -1,0 +1,1 @@
+# Simple healthcheck endpoint
