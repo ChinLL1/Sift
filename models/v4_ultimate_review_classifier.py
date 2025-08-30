@@ -408,7 +408,8 @@ def main():
     # Load data
     print("📁 Loading data...")
     try:
-        df = pd.read_csv("../data/test_reviews.csv")  # Removed '../' - adjust path as needed
+        # Ensure path is at /Sift.
+        df = pd.read_csv("data/test_reviews.csv")
         df['text'] = df['text'].fillna('').astype(str)
         print(f"✅ Loaded {len(df)} reviews")
         
@@ -504,7 +505,7 @@ def main():
         print(f"{idx+1:2d}. {location_info}{text_preview:50} → {row['predicted_category_enhanced']:12} ({row['confidence_enhanced']:.2f}){change_info}")
     
     # Save results
-    output_file = "enhanced_classified_reviews.csv"
+    output_file = "data/enhanced_classified_reviews.csv"
     df.to_csv(output_file, index=False)
     print(f"\n✅ Saved enhanced results to {output_file}")
 
