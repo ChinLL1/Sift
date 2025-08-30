@@ -119,7 +119,7 @@ def main():
     # Load data
     print("📁 Loading review data...")
     try:
-        df = pd.read_csv("../test_reviews.csv")
+        df = pd.read_csv("../data/test_reviews.csv")
         df['text'] = df['text'].fillna('').astype(str)
         print(f"✅ Loaded {len(df)} reviews")
     except Exception as e:

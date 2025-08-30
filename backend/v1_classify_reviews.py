@@ -3,7 +3,7 @@ from transformers import Trainer, TrainingArguments, AutoTokenizer, AutoModelFor
 from datasets import Dataset
 
 # === Load Dataset ===
-df = pd.read_csv("test_reviews.csv")
+df = pd.read_csv("../data/test_reviews.csv")
 # Check if the 'category' column has any values
 print(df['category'].unique())
 

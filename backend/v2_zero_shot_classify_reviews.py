@@ -2,7 +2,7 @@ import pandas as pd
 from transformers import pipeline
 
 # === Load CSV ===
-df = pd.read_csv("../test_reviews.csv")
+df = pd.read_csv("../data/test_reviews.csv")
 
 # Ensure you have a column with review text
 reviews = df["text"].dropna().astype(str).tolist()
